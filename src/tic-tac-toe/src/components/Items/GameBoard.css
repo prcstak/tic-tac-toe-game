@@ -1,0 +1,36 @@
+.game {
+    filter: drop-shadow(6px 8px 0px #000000);
+    flex-grow: 10;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border:none;
+    border-collapse: collapse;
+}
+
+table td {
+    border-left: 1em solid #2C8272;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table tr {
+    border-bottom: 1em solid #2C8272;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+.xo {
+    line-height: 1;
+    font-size: 100px;
+    width: 1em;
+    height: 1em;
+}
+
