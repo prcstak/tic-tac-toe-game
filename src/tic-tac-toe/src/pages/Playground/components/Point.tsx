@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import OPiece from "../Items/OPiece";
-import XPiece from "../Items/XPiece";
+import OPiece from "../../../components/Piece/OPiece";
+import XPiece from "../../../components/Piece/XPiece";
 import "./Points.css";
 
 interface PointsProps {

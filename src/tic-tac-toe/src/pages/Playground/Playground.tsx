@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
-import GameBoard from "../Items/GameBoard";
+import GameBoard from "./components/GameBoard";
 import "./Playground.css";
-import Points from "./Point";
+import Points from "./components/Point";
 
 interface PlaygroundProps {
 

@@ -1,7 +1,7 @@
 import { FunctionComponent, useState } from "react";
 import "./GameBoard.css";
-import OPiece from "./OPiece";
-import XPiece from "./XPiece";
+import XPiece from "../../../components/Piece/XPiece";
+import OPiece from "../../../components/Piece/OPiece";
 
 interface GameBoardProps {
 

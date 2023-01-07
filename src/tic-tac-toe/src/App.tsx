@@ -1,9 +1,9 @@
 import { BrowserRouter } from 'react-router-dom'
-import { Router, Routes, Route} from 'react-router'
-import Playground from './components/Playground/Playground'
-import StartPage from './components/Authorization/StartPage'
-import LoginPage from './components/Authorization/Login'
-import SignupPage from './components/Authorization/Signup'
+import { Routes, Route} from 'react-router'
+import LoginPage from './pages/LogIn/Login'
+import SignupPage from './pages/SignUp/Signup'
+import StartPage from './pages/StartPage/StartPage'
+import Playground from './pages/Playground/Playground'
 
 function App() {
 
