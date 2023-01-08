@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "account", "account\account.csproj", "{56A8BB7E-491E-49D2-94E7-7C2015191854}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{56A8BB7E-491E-49D2-94E7-7C2015191854}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "account", "account", "{9E8ABBCE-A77E-40CF-9EA6-1A94E833F17D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "infrastructure", "infrastructure\infrastructure.csproj", "{03C90BA0-E24D-4717-B0D4-26BE986CE273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "domain\domain.csproj", "{E19D8F16-A7C7-4AFC-A479-7D3452E90039}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +18,18 @@ Global
 		{56A8BB7E-491E-49D2-94E7-7C2015191854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A8BB7E-491E-49D2-94E7-7C2015191854}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A8BB7E-491E-49D2-94E7-7C2015191854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C90BA0-E24D-4717-B0D4-26BE986CE273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C90BA0-E24D-4717-B0D4-26BE986CE273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C90BA0-E24D-4717-B0D4-26BE986CE273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C90BA0-E24D-4717-B0D4-26BE986CE273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E19D8F16-A7C7-4AFC-A479-7D3452E90039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E19D8F16-A7C7-4AFC-A479-7D3452E90039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E19D8F16-A7C7-4AFC-A479-7D3452E90039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E19D8F16-A7C7-4AFC-A479-7D3452E90039}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56A8BB7E-491E-49D2-94E7-7C2015191854} = {9E8ABBCE-A77E-40CF-9EA6-1A94E833F17D}
+		{03C90BA0-E24D-4717-B0D4-26BE986CE273} = {9E8ABBCE-A77E-40CF-9EA6-1A94E833F17D}
+		{E19D8F16-A7C7-4AFC-A479-7D3452E90039} = {9E8ABBCE-A77E-40CF-9EA6-1A94E833F17D}
 	EndGlobalSection
 EndGlobal
