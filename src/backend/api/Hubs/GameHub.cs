@@ -49,6 +49,11 @@ public class GameHub : Hub
         Clients.Group(roomName).SendAsync("OnTurn", _game.GetTable(roomName));
     }
 
+    public void ClearTable(string roomName)
+    {
+        _game.Restart(roomName);
+    }
+
     public override Task OnDisconnectedAsync(Exception? exception)
     {
         _game.RemoveFromAllRooms(Context.ConnectionId);
