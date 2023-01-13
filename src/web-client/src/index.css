@@ -34,11 +34,11 @@ body {
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1;
 }
 h2 {
-  font-size: 2.2em;
-  line-height: 1.1;
+  font-size: 2em;
+  line-height: 0.5;
 }
 h3 {
   font-size: 1.2em;
@@ -53,6 +53,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -64,22 +65,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-.board {
+.plate {
   padding: 1em;
   background: #FACAD8;
   box-shadow: 8px 12px 0px #000000;
-  border-radius: 50px;
+  border-radius: 30px;
+}
+
+input {
+  border-radius: 25px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: large;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }

@@ -31,11 +31,10 @@ const GameBoard: FunctionComponent<GameBoardProps> = () => {
                     }
                     return <td key={`${j}`}>
                         <div key={`${j}.${i}`}
-                            className="xo"
                             id={`${i}.${j}`}
                             onClick={(e) => check(e)}>
                             {
-                                turn ? "X" : "O"
+                                turn ? <div style={{opacity: 0.3}}><XPiece/></div> : <div style={{opacity: 0.3}}><OPiece/></div>
                             }
                         </div>
                     </td>;

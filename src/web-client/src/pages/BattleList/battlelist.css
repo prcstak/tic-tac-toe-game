@@ -1,0 +1,42 @@
+.rate-create {
+    max-height: 2.8em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    justify-content: space-around;
+
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+}
+
+.but {
+    font-size: 1.4em;
+    color: white;
+}
+
+.list {
+    margin-top: 10px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-item {
+    border-radius: 20px;
+    border: 2px solid white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

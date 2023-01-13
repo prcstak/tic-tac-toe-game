@@ -10,12 +10,10 @@ interface PlaygroundProps {
 const Playground: FunctionComponent<PlaygroundProps> = () => {
     return (
         <div className="page">
-            <div className="board">
+            <div className="board plate">
                 <Points />
                 <GameBoard />
-            </div>
-            <div className="board">
-
+                <div/>
             </div>
         </div>
     );
