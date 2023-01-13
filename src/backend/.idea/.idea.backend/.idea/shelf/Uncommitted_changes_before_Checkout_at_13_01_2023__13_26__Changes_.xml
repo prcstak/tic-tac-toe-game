@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_13_01_2023,_13_26_[Changes]" date="1673605570048" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_01_2023,_13_26_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 13.01.2023, 13:26 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="api/obj/Debug/net6.0/api.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="api/obj/Debug/net6.0/api.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_01_2023,_13_26_[Changes]/api.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_01_2023,_13_26_[Changes]/infrastructure.csproj.AssemblyReference.cache" />
+  </binary>
+</changelist>

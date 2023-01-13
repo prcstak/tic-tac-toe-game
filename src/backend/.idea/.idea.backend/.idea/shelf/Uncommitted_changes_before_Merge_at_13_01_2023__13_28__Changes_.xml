@@ -1,0 +1,84 @@
+<changelist name="Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]" date="1673605752116" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 13.01.2023, 13:28 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="interfaces/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="interfaces/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="api/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="api/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget1.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/infrastructure.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.assets.cache" />
+    <option name="AFTER_PATH" value="infrastructure/obj/Debug/net6.0/infrastructure.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/infrastructure.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="interfaces/obj/Debug/net6.0/interfaces.assets.cache" />
+    <option name="AFTER_PATH" value="interfaces/obj/Debug/net6.0/interfaces.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/interfaces.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="api/obj/Debug/net6.0/api.assets.cache" />
+    <option name="AFTER_PATH" value="api/obj/Debug/net6.0/api.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/api.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="domain/obj/Debug/net6.0/domain.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="domain/obj/Debug/net6.0/domain.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/domain.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="application/obj/Debug/net6.0/application.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="application/obj/Debug/net6.0/application.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/application.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="domain/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="domain/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget2.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="application/obj/Debug/net6.0/application.assets.cache" />
+    <option name="AFTER_PATH" value="application/obj/Debug/net6.0/application.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/application.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="application/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="application/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget3.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="infrastructure/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="infrastructure/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget4.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="common/obj/Debug/net6.0/common.assets.cache" />
+    <option name="AFTER_PATH" value="common/obj/Debug/net6.0/common.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/common.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="domain/obj/Debug/net6.0/domain.assets.cache" />
+    <option name="AFTER_PATH" value="domain/obj/Debug/net6.0/domain.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/domain.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="common/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="common/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/project.nuget5.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="api/obj/Debug/net6.0/api.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="api/obj/Debug/net6.0/api.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.backend/.idea/shelf/Uncommitted_changes_before_Merge_at_13_01_2023,_13_28_[Changes]/api.csproj.AssemblyReference.cache" />
+  </binary>
+</changelist>
