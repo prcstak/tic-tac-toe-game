@@ -1,5 +1,10 @@
+using System;
 using System.Net;
 using System.Text.Json;
+using System.Threading.Tasks;
+using common;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 
 namespace account.Middleware;
 
@@ -27,6 +32,8 @@ public class CustomExceptionHandlingMiddleware
         var error = string.Empty;
         var errorCode = exception switch
         {
+            WrongCredentialsException => HttpStatusCode.BadRequest,
+            UserAlreadyExistsException => HttpStatusCode.BadRequest,
             _ => HttpStatusCode.InternalServerError
         };
 

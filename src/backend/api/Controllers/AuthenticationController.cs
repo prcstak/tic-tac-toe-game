@@ -1,13 +1,12 @@
+using System.Collections.Generic;
 using System.Security.Claims;
-using application;
+using System.Threading.Tasks;
 using common;
-using domain;
-using infrastructure;
 using interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace account.Controllers;
 
@@ -51,14 +50,9 @@ public class AuthenticationController : BaseController
         return Ok();
     }
 
-    private async Task Authenticate(string userName)
+    [HttpPost]
+    private Task<string> Authenticate()
     {
-        var claims = new List<Claim>
-        {
-            new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
-        };
-        ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
-            ClaimsIdentity.DefaultRoleClaimType);
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+        return Task.FromResult(UserId);
     }
 }
