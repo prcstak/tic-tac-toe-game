@@ -37,8 +37,8 @@ h1 {
   line-height: 1;
 }
 h2 {
-  font-size: 2.2em;
-  line-height: 1;
+  font-size: 2em;
+  line-height: 0.5;
 }
 h3 {
   font-size: 1.2em;
@@ -65,9 +65,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.board {
+.plate {
   padding: 1em;
   background: #FACAD8;
   box-shadow: 8px 12px 0px #000000;
   border-radius: 50px;
+}
+
+input {
+  border-radius: 25px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: large;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }

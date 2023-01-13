@@ -9,7 +9,7 @@ interface StartPageProps {
 const StartPage: FunctionComponent<StartPageProps> = () => {
     const navigate = useNavigate();
     return (
-        <div className="board">
+        <div className="board plate">
             <div className="start">
                 <img
                     src="/xo-game-logo.png"
