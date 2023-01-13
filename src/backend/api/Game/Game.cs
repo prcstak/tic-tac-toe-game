@@ -1,5 +1,4 @@
 using System.Collections.Concurrent;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace account.Game;
 
@@ -142,5 +141,10 @@ public class Game
             var user = game.Value.UserList.FirstOrDefault(user => user.ConnectionId == connectionId);
             if (user != null) game.Value.UserList.Remove(user);
         }
+    }
+
+    public List<UserInfo> GetPlayingPlayers(string roomName)
+    {
+        return _games[roomName].UserList.Where(user => user.Type == PlayerType.Player).ToList();
     }
 }

@@ -1,5 +1,7 @@
 using System.Text.RegularExpressions;
 using account.Game;
+using account.Producer;
+using common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
@@ -9,10 +11,12 @@ namespace account.Hubs;
 public class GameHub : Hub
 {
     private readonly Game.Game _game;
-    
-    public GameHub(Game.Game game)
+    private readonly MessageProducer _messageProducer;
+
+    public GameHub(Game.Game game, MessageProducer messageProducer)
     {
         _game = game;
+        _messageProducer = messageProducer;
     }
     
     private string Username => Context!.User!.Identity!.Name!;
@@ -38,13 +42,19 @@ public class GameHub : Hub
         _game.RemoveUserFromGame(roomName, Username);
     }
 
-    public void OnTurn(CellType cellType, int index, string roomName)
+    public void MakeTurn(CellType cellType, int index, string roomName)
     {
         _game.MakeMove(cellType, index, roomName);
 
         var status = _game.GetGameStatus(roomName);
         if (status is GameInfo.GameStatus.End or GameInfo.GameStatus.Tie)
-            Clients.Group(roomName).SendAsync("GameEnded", status);
+        {
+            Clients.Group(roomName).SendAsync("GameEnded", status, cellType);
+            var playingPlayers = _game.GetPlayingPlayers(roomName);
+            var leftWon = Context.ConnectionId == playingPlayers[0].ConnectionId;
+            _messageProducer.SendMessage(new GameEndedEvent(
+                playingPlayers[0].Username, playingPlayers[1].Username, leftWon));
+        }
 
         Clients.Group(roomName).SendAsync("OnTurn", _game.GetTable(roomName));
     }

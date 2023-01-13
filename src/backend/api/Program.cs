@@ -2,6 +2,7 @@ using System.Text;
 using account.Game;
 using account.Hubs;
 using account.Middleware;
+using account.Producer;
 using application;
 using infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,6 +18,7 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddSingleton<Game>();
+builder.Services.AddTransient<MessageProducer>();
 
 builder.Services.AddSignalR();
 
