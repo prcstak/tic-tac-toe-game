@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj": {}
+    "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {}
   },
   "projects": {
-    "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj": {
+    "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj",
+        "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj",
         "projectName": "domain",
-        "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj",
-        "packagesPath": "/home/marsel/.nuget/packages/",
-        "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/obj/",
+        "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj",
+        "packagesPath": "/home/invis/.nuget/packages/",
+        "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/marsel/.nuget/NuGet/NuGet.Config"
+          "/home/invis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UAdImKpyWetZpCAlRRFbkC9JxLTj00EFM9PAL1c0qN8OQf9fyMlOhfpe/a87yA25FybWyYo45tRuOffzM9LcjQ==",
+  "dgSpecHash": "pcvK78YCPmpmdSfV8d62V56qYujAGHPXCNnn7vEfaqMQ27aCn4S46HzTV8Q8AVn8fUVnzdwB8IcjQRj6uuQjmQ==",
   "success": true,
-  "projectFilePath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj",
+  "projectFilePath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {}
+    "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {}
   },
   "projects": {
-    "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj": {
+    "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj",
-        "projectName": "domain",
-        "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj",
-        "packagesPath": "/home/marsel/.nuget/packages/",
-        "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/obj/",
+        "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj",
+        "projectName": "common",
+        "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj",
+        "packagesPath": "/home/invis/.nuget/packages/",
+        "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/marsel/.nuget/NuGet/NuGet.Config"
+          "/home/invis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,21 +52,73 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
+    "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
-        "projectName": "infrastructure",
-        "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
-        "packagesPath": "/home/marsel/.nuget/packages/",
-        "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/obj/",
+        "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj",
+        "projectName": "domain",
+        "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj",
+        "packagesPath": "/home/invis/.nuget/packages/",
+        "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/marsel/.nuget/NuGet/NuGet.Config"
+          "/home/invis/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
+        "projectName": "infrastructure",
+        "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
+        "packagesPath": "/home/invis/.nuget/packages/",
+        "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/invis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -78,8 +130,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj": {
-                "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj"
+              "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {
+                "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj"
+              },
+              "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
+                "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
               }
             }
           }
@@ -94,6 +149,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.12, )"
@@ -118,7 +181,66 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj",
+        "projectName": "interfaces",
+        "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj",
+        "packagesPath": "/home/invis/.nuget/packages/",
+        "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/invis/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj": {
+                "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj"
+              },
+              "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {
+                "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
         }
       }
     }
