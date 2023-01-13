@@ -1,6 +1,9 @@
 using System.Security.Claims;
+using application;
+using common;
 using domain;
 using infrastructure;
+using interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -9,41 +12,35 @@ using Microsoft.EntityFrameworkCore;
 namespace account.Controllers;
 
 [ApiController]
-[Route("[controller]/[action]")]
-public class AuthenticationController : ControllerBase
+[Route("[controller]")]
+public class AuthenticationController : BaseController
 {
     private readonly ILogger<AuthenticationController> _logger;
-    private readonly AccountContext _db;
-
-    public AuthenticationController(ILogger<AuthenticationController> logger, AccountContext dbContext)
+    private readonly IAccountService _accountService;
+    
+    public AuthenticationController(
+        ILogger<AuthenticationController> logger,
+        IAccountService accountService)
     {
         _logger = logger;
-        _db = dbContext;
+        _accountService = accountService;
+    }
+    
+    [HttpPost]
+    [Route("login")]
+    public async Task<IActionResult> Login([FromForm] UserLoginRequest userLoginRequest)
+    {
+        var token = await _accountService.Login(userLoginRequest);
+
+        return Ok(token);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Login(string name, string password)
+    [Route("signup")]
+    public async Task<IActionResult> Signup([FromForm] UserSignupRequest userSignupRequest)
     {
-        PlayerAccount? playerAccount = await _db.Players.FirstOrDefaultAsync(u =>
-            u.Name == name && u.Password == password); //TODO: add hash 
-        if (playerAccount == null) return Unauthorized();
-        
-        await Authenticate(name);
-        _logger.LogInformation($"Player {name} logged in");
-        return Ok();
-    }
+        await _accountService.Register(userSignupRequest);
 
-    [HttpPost]
-    public async Task<IActionResult> Signup(string name, string password)
-    {
-        PlayerAccount? playerAccount = await _db.Players.FirstOrDefaultAsync(u =>
-            u.Name == name);
-        if (playerAccount != null) return Conflict();
-        
-        _db.Players.Add(new PlayerAccount(Guid.NewGuid(), name, password, 0, 0)); //TODO: add hash
-        await _db.SaveChangesAsync();
-        await Authenticate(name);
-        _logger.LogInformation($"Player {name} signed up");
         return Ok();
     }
 
