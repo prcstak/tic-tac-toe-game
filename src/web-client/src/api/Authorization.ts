@@ -12,6 +12,10 @@ class Authorization {
             
         })
     }
+
+    static isLogged() {
+        return true; //..   
+    }
 }
 
 export default Authorization;

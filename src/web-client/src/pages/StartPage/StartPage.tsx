@@ -25,7 +25,7 @@ const StartPage: FunctionComponent<StartPageProps> = () => {
                         Sign Up
                     </button>
                 </div>
-                <h1/>
+                <h2/>
             </div>
         </div>
     );
