@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace account.Game;
 
@@ -82,6 +83,8 @@ public class Game
 {
     private static readonly ConcurrentDictionary<string, GameInfo> _games = new();
 
+    public CellType[] GetTable(string roomName) => _games[roomName].Table;
+
     public void CreateGame(string ownerName, int maxRating)
     {
         _games[ownerName] = new GameInfo
@@ -129,6 +132,15 @@ public class Game
         for (var i = 0; i < _games[roomName].Table.Length; i++)
         {
             _games[roomName].Table[i] = CellType.Empty;
+        }
+    }
+
+    public void RemoveFromAllRooms(string connectionId)
+    {
+        foreach (var game in _games)
+        {
+            var user = game.Value.UserList.FirstOrDefault(user => user.ConnectionId == connectionId);
+            if (user != null) game.Value.UserList.Remove(user);
         }
     }
 }
