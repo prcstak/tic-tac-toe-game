@@ -80,8 +80,17 @@ input {
   font-size: large;
 }
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   gap: 2em;
+}
+
+span {
+  color: purple;
+  text-shadow:
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }

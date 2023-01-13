@@ -21,7 +21,7 @@ public class AccountService : IAccountService
         ILogger<AccountService> logger,
         UserManager<Player> userManager,
         SignInManager<Player> signInManager,
-        IConfiguration configuration, 
+        IConfiguration configuration,
         ITokenService tokenService)
     {
         _context = context;
@@ -40,7 +40,12 @@ public class AccountService : IAccountService
 
         var result = await _userManager.CreateAsync(newUser, userSignupRequest.Password);
         if (!result.Succeeded)
-            throw new UserAlreadyExistsException(userSignupRequest.Username);
+        {
+            var passwordTooShortException = result.Errors.FirstOrDefault(a => a.Code == "PasswordTooShort");
+            if (passwordTooShortException != null)
+                throw new PasswordTooShortException(passwordTooShortException.Description);
+            else throw new UserAlreadyExistsException(userSignupRequest.Username);
+        }
     }
 
     public async Task<JWTToken> Login(UserLoginRequest userLoginRequest, CancellationToken cancellationToken = default)

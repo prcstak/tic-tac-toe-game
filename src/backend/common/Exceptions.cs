@@ -11,3 +11,8 @@ public class WrongCredentialsException : Exception
 {
     public WrongCredentialsException() : base($"User with such credentials does not exist") { }
 }
+
+public class PasswordTooShortException : Exception
+{
+    public PasswordTooShortException(string error) : base($"{error}") {}
+}

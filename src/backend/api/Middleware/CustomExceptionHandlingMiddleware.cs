@@ -33,7 +33,8 @@ public class CustomExceptionHandlingMiddleware
         var errorCode = exception switch
         {
             WrongCredentialsException => HttpStatusCode.BadRequest,
-            UserAlreadyExistsException => HttpStatusCode.BadRequest,
+            UserAlreadyExistsException => HttpStatusCode.Unauthorized,
+            PasswordTooShortException => HttpStatusCode.BadRequest,
             _ => HttpStatusCode.InternalServerError
         };
 

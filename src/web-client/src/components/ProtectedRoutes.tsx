@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import Authorization from "../api/Authorization";
+import authService from "../api/authService";
 import SignupPage from "../pages/SignUp/Signup";
 
 
 
 const ProtectedRoutes = () => {
     return (
-        Authorization.isLogged() ? <Outlet /> : <SignupPage />
+        authService.isLogged() ? <Outlet /> : <SignupPage />
     );
 };
 
