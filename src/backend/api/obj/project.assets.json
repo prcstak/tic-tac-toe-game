@@ -2659,6 +2659,7 @@
     "net6.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.13",
       "Microsoft.EntityFrameworkCore >= 6.0.12",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 6.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.12",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.8",
       "Swashbuckle.AspNetCore >= 6.2.3",
@@ -2669,19 +2670,19 @@
     ]
   },
   "packageFolders": {
-    "/home/marsel/.nuget/packages/": {}
+    "/home/invis/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/api.csproj",
+      "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/api.csproj",
-      "packagesPath": "/home/marsel/.nuget/packages/",
-      "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/obj/",
+      "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/api/api.csproj",
+      "packagesPath": "/home/invis/.nuget/packages/",
+      "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/marsel/.nuget/NuGet/NuGet.Config"
+        "/home/invis/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2693,17 +2694,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/marsel/Документы/tic-tac-toe-game/src/backend/application/application.csproj": {
-              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/application/application.csproj"
+            "/home/invis/dev/tic-tac-toe-game/src/backend/application/application.csproj": {
+              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/application/application.csproj"
             },
-            "/home/marsel/Документы/tic-tac-toe-game/src/backend/common/common.csproj": {
-              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/common/common.csproj"
+            "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj": {
+              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj"
             },
-            "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
-              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj"
+            "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
+              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj"
             },
-            "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
-              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
+            "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
+              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
             }
           }
         }
@@ -2723,6 +2724,10 @@
             "version": "[6.0.13, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.12, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
             "target": "Package",
             "version": "[6.0.12, )"
           },
@@ -2759,7 +2764,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
       }
     }
   }

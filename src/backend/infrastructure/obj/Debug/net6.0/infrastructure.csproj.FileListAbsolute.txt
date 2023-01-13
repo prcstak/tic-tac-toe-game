@@ -17,3 +17,5 @@
 /home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/Debug/net6.0/infrastructure.dll
 /home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/Debug/net6.0/ref/infrastructure.dll
 /home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/Debug/net6.0/infrastructure.pdb
+/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/bin/Debug/net6.0/infrastructure.runtimeconfig.json
+/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/Debug/net6.0/infrastructure.genruntimeconfig.cache
