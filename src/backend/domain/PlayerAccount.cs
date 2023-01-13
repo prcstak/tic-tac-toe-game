@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace domain;
 
-public record PlayerAccount(string Name, string Password, int Win, int Loss );
+public record PlayerAccount(Guid Id, string Name, string Password, int Win, int Loss );

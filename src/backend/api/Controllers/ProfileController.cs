@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace account.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class ProfileController : ControllerBase
 {
     private readonly ILogger<AuthenticationController> _logger;

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace account.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class AuthenticationController : ControllerBase
 {
     private readonly ILogger<AuthenticationController> _logger;
@@ -40,7 +40,8 @@ public class AuthenticationController : ControllerBase
             u.Name == name);
         if (playerAccount != null) return Conflict();
         
-        _db.Players.Add(new PlayerAccount(name, password, 0, 0)); //TODO: add hash
+        _db.Players.Add(new PlayerAccount(Guid.NewGuid(), name, password, 0, 0)); //TODO: add hash
+        await _db.SaveChangesAsync();
         await Authenticate(name);
         _logger.LogInformation($"Player {name} signed up");
         return Ok();

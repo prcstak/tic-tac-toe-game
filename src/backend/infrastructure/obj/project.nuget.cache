@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "r7UJoa+xE2VR7W+GJeIEtMo2oUHbmUWrq9l/ktzuQT5rM0D3QMmnql4CrP5ZNhi+fLjqa9LDZcW2f05avNO7Ow==",
+  "dgSpecHash": "LekQAsTyCkK42lilFsCjqj9vR90NskGYN4voJZ/O3bQbZLQne3h+LKzn7RmOSImVRgb8IuZYLkAaR+bUpC7gTQ==",
   "success": true,
   "projectFilePath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
   "expectedPackageFiles": [
+    "/home/marsel/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.entityframeworkcore/6.0.12/microsoft.entityframeworkcore.6.0.12.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.12/microsoft.entityframeworkcore.abstractions.6.0.12.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.12/microsoft.entityframeworkcore.analyzers.6.0.12.nupkg.sha512",
+    "/home/marsel/.nuget/packages/microsoft.entityframeworkcore.design/6.0.12/microsoft.entityframeworkcore.design.6.0.12.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.12/microsoft.entityframeworkcore.relational.6.0.12.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/home/marsel/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

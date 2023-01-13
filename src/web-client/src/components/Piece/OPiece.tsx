@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import "./Piece.css";
+import "./OPiece.css";
 
 interface OPieceProps {
     
@@ -7,13 +8,11 @@ interface OPieceProps {
  
 const OPiece: FunctionComponent<OPieceProps> = () => {
     return ( 
-        <div>
-            <img
-                    className="piece"
+        <img
+                    className="opiece"
                     src="/opiece.png"
                     onContextMenu={(e) => e.preventDefault()}
                     alt="o" />
-        </div>
      );
 }
  

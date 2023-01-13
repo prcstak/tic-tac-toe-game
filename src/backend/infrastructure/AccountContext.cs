@@ -5,7 +5,7 @@ namespace infrastructure;
 
 public class AccountContext : DbContext
 {
-    public DbSet<PlayerAccount> Players;
+    public DbSet<PlayerAccount> Players { get; set;}
     public AccountContext(DbContextOptions<AccountContext> options)
         : base(options)
     {

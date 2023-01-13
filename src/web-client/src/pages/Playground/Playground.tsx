@@ -13,6 +13,7 @@ const Playground: FunctionComponent<PlaygroundProps> = () => {
             <div className="board">
                 <Points />
                 <GameBoard />
+                <div/>
             </div>
             <div className="board">
 

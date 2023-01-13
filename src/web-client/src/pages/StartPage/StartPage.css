@@ -7,7 +7,6 @@
 
 .logo {
   -webkit-touch-callout: none;
-  height: 8em;
   padding: 1.5em;
   will-change: filter;
   transition: transform .3s ease-in-out;
@@ -40,4 +39,11 @@
 .account-button {
   font-size: 1em;
   color: white;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  justify-content: space-evenly ;
 }
