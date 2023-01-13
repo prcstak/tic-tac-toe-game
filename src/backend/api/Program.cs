@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
-builder.Services.AddAuthentication();
+builder.Services.AddAuthentication().AddCookie("Cookies");
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

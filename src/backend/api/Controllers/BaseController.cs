@@ -9,5 +9,5 @@ public class BaseController : ControllerBase
 {
     internal string UserId => !User.Identity.IsAuthenticated
         ? string.Empty
-        : (User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        : (User.FindFirst(ClaimTypes.Name).Value);
 }

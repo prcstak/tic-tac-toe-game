@@ -50,14 +50,9 @@ public class AuthenticationController : BaseController
         return Ok();
     }
 
-    private async Task Authenticate(string userName)
+    [HttpPost]
+    private Task<string> Authenticate()
     {
-        var claims = new List<Claim>
-        {
-            new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
-        };
-        ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
-            ClaimsIdentity.DefaultRoleClaimType);
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+        return Task.FromResult(UserId);
     }
 }
