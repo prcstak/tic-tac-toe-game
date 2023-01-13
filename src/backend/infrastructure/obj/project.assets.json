@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -347,6 +360,26 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/6.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.12"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/6.0.12": {
@@ -938,6 +971,22 @@
     }
   },
   "libraries": {
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "sha512": "b0R9X7L6zMqNsssKDvhYHuNi5x0s4DyHTeXybIAyGaitKiW1Q5aAGKdV2codHPiePv9yHfC9hAMyScXQ/xXhPw==",
       "type": "package",
@@ -1214,6 +1263,21 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.6.0.12.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.12": {
+      "sha512": "R4rse/Dli8xqyDoQ0BVO8ECAEuwsDvu+qolTyvJl0mmFJodcxTHZQ8dUxxElqk+fTkiHE9rBMIZPoLE10ZCOCA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/6.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.6.0.12.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.12": {
@@ -2019,25 +2083,26 @@
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.12",
       "Microsoft.EntityFrameworkCore >= 6.0.12",
+      "Microsoft.EntityFrameworkCore.Design >= 6.0.12",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.8",
       "domain >= 1.0.0",
       "interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/invis/.nuget/packages/": {}
+    "/home/marsel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
+      "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
       "projectName": "infrastructure",
-      "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
-      "packagesPath": "/home/invis/.nuget/packages/",
-      "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/obj/",
+      "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj",
+      "packagesPath": "/home/marsel/.nuget/packages/",
+      "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/invis/.nuget/NuGet/NuGet.Config"
+        "/home/marsel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2049,11 +2114,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/domain/domain.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/domain/domain.csproj"
             },
-            "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
             }
           }
         }
@@ -2080,6 +2145,12 @@
             "target": "Package",
             "version": "[6.0.12, )"
           },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.0.12, )"
+          },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[6.0.8, )"
@@ -2100,7 +2171,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }

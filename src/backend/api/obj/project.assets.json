@@ -2669,19 +2669,19 @@
     ]
   },
   "packageFolders": {
-    "/home/invis/.nuget/packages/": {}
+    "/home/marsel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/invis/dev/tic-tac-toe-game/src/backend/api/api.csproj",
+      "projectUniqueName": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/api/api.csproj",
-      "packagesPath": "/home/invis/.nuget/packages/",
-      "outputPath": "/home/invis/dev/tic-tac-toe-game/src/backend/api/obj/",
+      "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/api.csproj",
+      "packagesPath": "/home/marsel/.nuget/packages/",
+      "outputPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/invis/.nuget/NuGet/NuGet.Config"
+        "/home/marsel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2693,17 +2693,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/invis/dev/tic-tac-toe-game/src/backend/application/application.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/application/application.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/application/application.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/application/application.csproj"
             },
-            "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/common/common.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/common/common.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/common/common.csproj"
             },
-            "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/infrastructure/infrastructure.csproj"
             },
-            "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
-              "projectPath": "/home/invis/dev/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
+            "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj": {
+              "projectPath": "/home/marsel/Документы/tic-tac-toe-game/src/backend/interfaces/interfaces.csproj"
             }
           }
         }
@@ -2759,7 +2759,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.112/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }
