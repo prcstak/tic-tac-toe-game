@@ -36,10 +36,10 @@ class authService {
         return false;
     }
 
-    static async getToken() {
-        let token = localStorage.getItem('user');
+    static getToken() {
+        let token = localStorage.getItem('token');
         if (token) {
-            return JSON.parse(token);
+            return JSON.parse(token).accessToken;
         }
         return null;
     }

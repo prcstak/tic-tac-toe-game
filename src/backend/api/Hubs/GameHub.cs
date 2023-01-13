@@ -18,15 +18,15 @@ public class GameHub : Hub
         _game = game;
         _messageProducer = messageProducer;
     }
-    
+
     private string Username => Context!.User!.Identity!.Name!;
 
     public void JoinGame(string roomName)
     {
         Groups.AddToGroupAsync(Context.ConnectionId, roomName);
         _game.JoinGame(
-            username: Username, 
-            connectionId: Context.ConnectionId, 
+            username: Username,
+            connectionId: Context.ConnectionId,
             roomName: roomName);
     }
 
@@ -34,12 +34,18 @@ public class GameHub : Hub
     {
         Groups.AddToGroupAsync(Context.ConnectionId, Username);
         _game.CreateGame(Username, maxRating);
+        GetGames();
     }
 
     public void Leave(string roomName)
     {
         Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
         _game.RemoveUserFromGame(roomName, Username);
+    }
+
+    public void GetGames()
+    {
+        Clients.All.SendAsync("Games", _game.GetGames());
     }
 
     public void MakeTurn(CellType cellType, int index, string roomName)

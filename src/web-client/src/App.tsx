@@ -6,8 +6,11 @@ import StartPage from './pages/StartPage/StartPage'
 import Playground from './pages/Playground/Playground'
 import BattleList from './pages/BattleList/BattleListPage'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import { HubConnection } from '@microsoft/signalr'
+import { useState } from 'react'
 
 function App() {
+  const [connection, setConnection] = useState<HubConnection>( );
 
   return (
     <div className="App">
@@ -18,7 +21,7 @@ function App() {
           <Route path='/' element={<StartPage />} />
           <Route element={<ProtectedRoutes />}>
             <Route path='/playground' element={<Playground />} />
-            <Route path='/battlelist' element={<BattleList />} />
+            <Route path='/battlelist' element={<BattleList connection={connection} setConnection={(val : HubConnection) => setConnection(val)}/>} />
           </Route>
         </Routes>
       </BrowserRouter>

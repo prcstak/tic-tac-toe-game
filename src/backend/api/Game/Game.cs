@@ -106,6 +106,10 @@ public class Game
         });
     }
 
+    public List<GameInfo> GetGames() {
+        return _games.Values.ToList();
+    }
+
     public void RemoveUserFromGame(string roomName, string username)
     {
         _games[roomName].UserList.Remove(_games[roomName].UserList.First(user => user.Username == username));
