@@ -45,5 +45,13 @@ public class GameHub : Hub
         var status = _game.GetGameStatus(roomName);
         if (status is GameInfo.GameStatus.End or GameInfo.GameStatus.Tie)
             Clients.Group(roomName).SendAsync("GameEnded", status);
+
+        Clients.Group(roomName).SendAsync("OnTurn", _game.GetTable(roomName));
+    }
+
+    public override Task OnDisconnectedAsync(Exception? exception)
+    {
+        _game.RemoveFromAllRooms(Context.ConnectionId);
+        return base.OnDisconnectedAsync(exception);
     }
 }
