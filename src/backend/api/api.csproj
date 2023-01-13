@@ -27,4 +27,10 @@
       <ProjectReference Include="..\interfaces\interfaces.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="RabbitMQ.Client">
+        <HintPath>..\..\..\..\..\Users\jenka\.nuget\packages\rabbitmq.client\6.4.0\lib\netstandard2.0\RabbitMQ.Client.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
