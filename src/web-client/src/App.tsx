@@ -4,6 +4,7 @@ import LoginPage from './pages/LogIn/Login'
 import SignupPage from './pages/SignUp/Signup'
 import StartPage from './pages/StartPage/StartPage'
 import Playground from './pages/Playground/Playground'
+import BattleList from './pages/BattleList/BattleListPage'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<StartPage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/signup' element={<SignupPage/>}/>
+          <Route path='/battlelist' element={<BattleList/>}/>
         </Routes>
       </BrowserRouter>
     </div>
