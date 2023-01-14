@@ -2,12 +2,13 @@ using System.Text.RegularExpressions;
 using account.Game;
 using account.Producer;
 using common;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
 namespace account.Hubs;
 
-[Authorize]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 public class GameHub : Hub
 {
     private readonly Game.Game _game;
@@ -19,7 +20,7 @@ public class GameHub : Hub
         _messageProducer = messageProducer;
     }
 
-    private string Username => Context!.User!.Identity!.Name!;
+    private string Username => Context!.UserIdentifier!;
 
     public void JoinGame(string roomName)
     {
@@ -28,6 +29,11 @@ public class GameHub : Hub
             username: Username,
             connectionId: Context.ConnectionId,
             roomName: roomName);
+        
+        Clients.Group(roomName)
+            .SendAsync("OnTurn",
+                _game.GetTable(roomName),
+                (int) _game.GetTurn(roomName));
     }
 
     public void CreateGame(int maxRating)
@@ -55,6 +61,10 @@ public class GameHub : Hub
         var status = _game.GetGameStatus(roomName);
         if (status is GameInfo.GameStatus.End or GameInfo.GameStatus.Tie)
         {
+            Clients.Group(roomName)
+                .SendAsync("OnTurn",
+                    _game.GetTable(roomName)
+                    , _game.GetTurn(roomName));
             Clients.Group(roomName).SendAsync("GameEnded", status, cellType);
             var playingPlayers = _game.GetPlayingPlayers(roomName);
             var leftWon = Context.ConnectionId == playingPlayers[0].ConnectionId;
@@ -62,7 +72,10 @@ public class GameHub : Hub
                 playingPlayers[0].Username, playingPlayers[1].Username, leftWon));
         }
 
-        Clients.Group(roomName).SendAsync("OnTurn", _game.GetTable(roomName));
+        Clients.Group(roomName)
+            .SendAsync("OnTurn",
+                _game.GetTable(roomName)
+                , _game.GetTurn(roomName));
     }
 
     public void ClearTable(string roomName)

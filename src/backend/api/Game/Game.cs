@@ -23,12 +23,20 @@ public class GameInfo
         Tie,
         End
     }
-    
+
+    public enum Turn
+    {
+        X,
+        O
+    }
+
     public string Owner { get; set; }
     public DateTime DateCreated { get; set; }
     public int MaxRating { get; set; }
     public Status Status { get; set; }
+    public Turn КтоХодит { get; set; }
     public List<UserInfo> UserList { get; set; }
+
     public CellType[] Table { get; set; } = new[]
     {
         CellType.Empty, CellType.Empty, CellType.Empty,
@@ -39,16 +47,14 @@ public class GameInfo
     public GameStatus GetStatus()
     {
         var isWin =
-            CheckRow(new CellType[] { Table[0], Table[1], Table[2] }) || // borders
-            CheckRow(new CellType[] { Table[2], Table[5], Table[6] }) ||
-            CheckRow(new CellType[] { Table[8], Table[7], Table[6] }) ||
-            CheckRow(new CellType[] { Table[6], Table[3], Table[0] }) ||
-
-            CheckRow(new CellType[] { Table[3], Table[4], Table[5] }) || // center
-            CheckRow(new CellType[] { Table[1], Table[4], Table[7] }) ||
-
-            CheckRow(new CellType[] { Table[0], Table[4], Table[8] }) || // diagonal
-            CheckRow(new CellType[] { Table[2], Table[4], Table[6] });
+            CheckRow(new CellType[] {Table[0], Table[1], Table[2]}) || // borders
+            CheckRow(new CellType[] {Table[2], Table[5], Table[6]}) ||
+            CheckRow(new CellType[] {Table[8], Table[7], Table[6]}) ||
+            CheckRow(new CellType[] {Table[6], Table[3], Table[0]}) ||
+            CheckRow(new CellType[] {Table[3], Table[4], Table[5]}) || // center
+            CheckRow(new CellType[] {Table[1], Table[4], Table[7]}) ||
+            CheckRow(new CellType[] {Table[0], Table[4], Table[8]}) || // diagonal
+            CheckRow(new CellType[] {Table[2], Table[4], Table[6]});
 
         var isTie = !isWin && Table.All(cell => cell != CellType.Empty);
 
@@ -91,8 +97,9 @@ public class Game
             Owner = ownerName,
             DateCreated = DateTime.Now,
             MaxRating = maxRating,
+            КтоХодит = GameInfo.Turn.X,
             Status = Status.NotStarted,
-            UserList =  new List<UserInfo>()
+            UserList = new List<UserInfo>()
         };
     }
 
@@ -106,7 +113,8 @@ public class Game
         });
     }
 
-    public List<GameInfo> GetGames() {
+    public List<GameInfo> GetGames()
+    {
         return _games.Values.ToList();
     }
 
@@ -123,11 +131,21 @@ public class Game
     public void MakeMove(CellType cellType, int index, string roomName)
     {
         _games[roomName].Table[index] = cellType;
+        _games[roomName].КтоХодит =
+            _games[roomName]
+                .КтоХодит == GameInfo.Turn.X ?
+                GameInfo.Turn.O : 
+                GameInfo.Turn.X;
     }
 
     public GameInfo.GameStatus GetGameStatus(string roomName)
     {
         return _games[roomName].GetStatus();
+    }
+
+    public GameInfo.Turn GetTurn(string roomName)
+    {
+        return _games[roomName].КтоХодит;
     }
 
     public void Restart(string roomName)

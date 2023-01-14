@@ -11,3 +11,34 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.game {
+    filter: drop-shadow(6px 8px 0px #000000);
+}
+
+table {
+    border:none;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+}
+
+table td {
+    border-left: 1em solid #2C8272;
+    border-radius: 50%;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table tr {
+    border-bottom: 1em solid #2C8272;
+    border-radius: 50%;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}

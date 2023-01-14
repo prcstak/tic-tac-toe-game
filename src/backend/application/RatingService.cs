@@ -1,3 +1,4 @@
+using domain;
 using interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,5 +35,13 @@ public class RatingService : IRatingService
         }
 
         await _context.SaveChangesAsync();
+    }
+
+    public async Task<int> GetPlayerRating(string username)
+    {
+        var player = await _context.Players.FirstOrDefaultAsync(player => player.NormalizedUserName == username);
+        if (player == null)
+            throw new ArgumentException($"No user with {username} name");
+        return player.Rating;
     }
 }

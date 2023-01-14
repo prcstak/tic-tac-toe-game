@@ -22,7 +22,8 @@ public class TokenService : ITokenService
     {
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Name, username.ToUpper()),
+            /*new Claim(ClaimTypes.Name, username.ToUpper()),*/
+            new Claim(JwtRegisteredClaimNames.Sub, username.ToUpper()),
         };
 
         var secretBytes = Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]);

@@ -3,10 +3,44 @@ version: '3.8'
 services:
   database:
     image: postgres
+    container_name: 'database'
     ports:
       - "5432:5432"
     environment:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "admin"
       POSTGRES_DB: "tictactoe"
+    restart: always
+  client:
+    build:
+      context: ./web-client
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    restart: always
+  consumer:
+    build:
+      context: ./backend
+      dockerfile: ./backgroundService/Dockerfile
+    environment:
+      - RabbitMQ__Hostname=rabbitmq
+      - RabbitMQ__Port=5672
+    ports:
+      - "5049:80"
+    restart: always
+  api:
+    build:
+      context: ./backend
+      dockerfile: ./api/Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=tictactoe;Username=postgres;Password=admin
+      - RabbitMQ__Hostname=rabbitmq
+      - RabbitMQ__Port=5672
+    ports:
+      - "5120:80"
     restart: always
